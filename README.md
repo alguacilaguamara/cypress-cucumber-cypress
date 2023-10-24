@@ -3,8 +3,20 @@ This is a dockerfile to create a container with cypress-cucumber preprocessor an
 
 Build and run the container:
 ```bash
-docker build -t curl-service:latest .
+docker build -t cypress-cucumber:latest .
 ```
 ```bash
-docker run curl-service:latest
+docker run cypress-cucumber:latest
+```
+
+## Example of use
+
+Run an analisys:
+```bash
+docker run --rm -v <folder>:/e2e -w /e2e cypress-cucumber:latest sh -c 'npm install cypress --save-dev && xvfb-run cypress run --headless'
+```
+
+Generate report:
+```bash
+docker run --rm -v <folder>:/e2e -w /e2e cypress-cucumber:latest npm run Report
 ```
