@@ -11,7 +11,7 @@ docker run cypress-cucumber:latest
 
 ## Example of use
 
-Run an analisys:
+Execute an analysis:
 ```bash
 docker run --rm -v <folder>:/e2e -w /e2e cypress-cucumber:latest sh -c 'npm install cypress --save-dev && xvfb-run cypress run --headless'
 ```
